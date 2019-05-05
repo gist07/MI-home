@@ -1,0 +1,413 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	 <link rel="icon" href="images/favicon.ico">
+	<title>小米帐号 - 登录</title>
+	<link rel="stylesheet" type="text/css" href="icon/iconfont.css">
+	<style type="text/css">
+	*{
+		margin: 0;
+		padding:0;
+		text-decoration:none;
+		list-style: none;
+	}
+	body{
+		font-size: 14px;
+		font-family: Microsoft Yahei;
+		position: relative;
+	}
+	.loading{
+		color: #757575;
+	}
+	.top-logo{
+		height: 98px;
+		width: 1130px;
+		margin: 0 auto;
+		position: relative;
+		z-index: 30;
+
+	}
+	.top-logo a{
+        display: block;
+        height: 98px;
+        width: 200px;
+        position: absolute;
+        top: 0;
+        left: 0;
+	}
+	.top-logo a img{
+		display: block;
+		height: 98px;
+		width: 200px;
+	}
+	.bg{
+		width: 100%;
+		height:573px;
+		background: url('images/bg.jpg') no-repeat top center;
+		z-index: 0;
+	}
+	.bg a{
+		display: block;
+		height: 460px;
+		text-decoration: none;
+		text-indent: -9999em;
+	}
+	.w{
+		height: 654px;
+		width: 100%;
+		position: absolute;
+		top: 0;
+		right: 0;
+		cursor: pointer;
+		z-index: 3;
+	}
+	.lg{
+ 		width: 1130px;
+ 		margin: 0 auto;
+ 		z-index: 5;
+ 		padding-top: 130px;
+
+	}
+	.login{
+		height: 517px;
+		width: 410px;
+		background: #Fff;
+		margin:0 auto;
+		z-index: 4;
+		margin-right: 0;
+		margin-bottom: 0;
+		font-size: 14px;
+		position: relative;
+		cursor: pointer;
+	}
+	.login-top{
+		height: 83px;
+		width: 410px;
+		text-align: center;
+	}
+	.login-top a{
+		text-decoration:none;
+		font-size: 24px;
+		line-height: 83px;
+		color: #666;
+	}
+	.login-top span{
+		display: inline-block;
+		width: 0px;
+		height: 27px;
+		margin: 0 35px -6px 42px;
+		border: 1px solid #e0e0e0;
+	}
+	.login-top a.now,.login-top a:hover{
+		color: #ff6700;
+	}
+	.login-center{
+		height: 227px;
+		width: 410px;
+	}
+	.login-main{
+		width: 348px;
+		height: 227px;
+		margin: 0 auto;
+	}
+	#form1{
+		width: 348px;
+		height: 227px;
+		margin: 0 auto;
+		position: relative;
+	}
+    #form1 input {
+    	height: 22px;
+    	line-height: 22px;
+	    padding: 13px 23px 13px 14px;
+	    display: block;
+	    width: 308px;
+	    border:0 none;
+	    border:1px solid #e0e0e0;
+	    font-size: 14px;
+	    margin-top: 13px;
+	    outline-style: none;
+    }
+    #form1 input placeholder{
+
+    }
+    #form1 .pwd{
+    	margin-top: 13px;
+    }
+   #form1 .bt{
+          height: 50px;
+          width: 100%;
+          margin-top: 26px;
+          color: #fff;
+          background: #ef5b00;
+          cursor: pointer;
+          font-size: 14px;
+          text-align: center;
+          margin-bottom: 14px;
+    }
+    .phone{
+    	float:left;
+    }
+    .zc{
+    	float: right;
+    }
+    .phone a,.zc a:hover{
+    	color:#ef5b00;
+    }
+    .zc,a{
+    	color: #999;
+    }
+    .login-bottom{
+    	width: 348px;
+    	height: 66px;
+    	margin: 0 auto;
+    	margin-top: 110px;
+    	text-align: center;
+    }
+    .iconfont {
+		flex:1;
+		font-size: 30px;
+		margin-right: 30px;
+		margin-top:14px;
+  }
+   #user1{
+	color:#1296db;    	      
+  }
+  #user2{
+  color:#d81e06;
+  }
+   #user3{
+  	color:#1296db;
+  }
+   #user4{
+  	color:#1afa29;
+  }
+  .fotter{
+  	margin-top: 120px;
+  	height: 80px;
+  	width: 100%;
+  }
+  .fotter ul{
+  	height: 20px;
+  	width: 17%;
+  	margin:0 auto;
+  	display: flex;
+  	text-align: center;
+  }
+  .fotter ul>li>a{
+  	display: block;
+  	color: #757575;
+     flex:1;
+  }
+   .fotter ul>li>a:hover{
+   	color: #333;
+   }
+  .fotter ul span{
+  	padding:0 10px;
+  	color: #757575;
+  }
+  p{
+  	text-align: center;
+  	color: #757575;
+  	margin-top: 10px;
+  }
+  .sm-main{
+  	width: 410px;
+  	height: 330px;
+  }
+  .ewm{
+  	margin:0 auto;
+  	width: 180px;
+  	height: 180px;
+  	margin-top: 102px;
+  }
+  .sm-p{
+  	margin-top: 18px;
+  	margin-bottom: -10px;
+  }
+  .sm-p span{
+  	color: #ff6700;
+  	padding: 0 5px;
+  }
+  .show{
+  	display: block;
+  }
+  .hide{
+  	display: none;
+  }
+  .qh{
+  	height: 48px;
+  	border: 1px solid #e0e0e0;
+  	border-right: none;
+  	width: 61px;
+  	position: absolute;
+  	left: 0;
+  	top: 0;
+  	text-align: center;
+  	line-height: 48px;
+  	color: #333;
+  	cursor:default;
+  }
+  .number1{
+  	height: 48px;
+  	border: 1px solid #e0e0e0;
+  	border-left:none;
+  	width: 108px;
+  	position: absolute;
+  	right: 0;
+  	top: 63px;
+  	text-align: center;
+  	line-height: 48px;
+  	color: #003ab5;
+  	cursor: pointer;
+  }
+
+    </style>
+</head>
+<body>
+	<div class="top-logo">
+		<a href="homepage.html" target="_self">
+	   <img src="images/mistore_logo.png" class="logo">
+	</a>
+	</div>
+	<div class="bg">
+		<a href="#" target="_self">小米8</a>
+   </div>
+   <div class="w">
+   <div class="lg">
+     <div class="login">
+     	 <div class="login-top">
+	     	 <a class="a1 now" href="javascript:void(0)">帐号登录</a>
+	     	 <span></span>
+	     	 <a href="javascript:void(0)" class="a2">扫码登录</a>
+     	</div>
+     	<div class="sm-main hide" >
+     	  <div class="ewm">
+     		  <img src="images/ewm.png">
+     	   </div>
+     	   <p class="sm-p">使用<span>小米商城APP</span>扫一扫</p>
+     	   <p>小米手机可打开「设置」>「小米帐号」扫码登录</p>
+       </div>
+     	    <div class="login-center">
+                 <div class="login-main">
+                 	<form method="post" action="" id="form1">
+                 		<input type="text" placeholder="邮箱/手机号码/小米ID" name="user"   requireds autocomplete="off" class="username">
+                 		<input type="text" placeholder="密码" name="pwd" class="pwd"  requireds autocomplete="off" >
+                 						<!--手机号码登录-->
+                 		<div class="qh" style="display: none;">
+                                  +86
+                 		</div>
+		         		<input type="tel" placeholder="手机号码" name="phone"  requireds autocomplete="off" style="width: 246px; margin-left: 62px;display: none;" class="tel">
+		         		<input type="text" placeholder="短信验证码" name="yzm" class="yzm" autocomplete="off"  requireds style="width: 200px;display: none;" >
+		         		<div class="number1" style="display: none;">获取验证码</div>
+		         		               <!--登录-->
+                 		<input type="submit" value="登录" name="bt1" class="bt">
+                 		<div class="phone">
+                 		<a href="#" class="phone-a">手机短信登录/注册</a>
+                 	</div>
+                 	<div class="zc" >
+                 		<a href="#">立即注册</a>
+                 		<span>|</span>
+                 		<a href="#">忘记密码？</a>
+                 	</div>
+                 	</form>
+                 </div>
+     	    </div>
+     	       <div class="login-bottom">
+     	       	<fieldset style=" border:0;border-top: 1px solid #e0e0e0; margin-bottom: 13px;" >
+     	       		<legend align="center" style="color: #bbb;">其它方式登录</legend>
+     	       	</fieldset>
+     	       	<a href="#" id="user1">    
+ 			<i class="iconfont icon-qq"></i>
+     	       </a>
+     	        <a href="#" id="user2">
+     	     <i class="iconfont icon-weibo"></i>
+     	       </a>
+     	       <a href="#" id="user3">
+     	    <i class="iconfont icon-zhifubao"></i>
+     	      </a>
+     	      <a href="#" id="user4">
+         	<i class="iconfont icon-weixin"></i>
+     	      </a>
+     	       </div>
+      </div>
+   </div> 
+</div>
+<div class="fotter">
+ 	<ul>
+ 		<li><a href="javascript:void(0)" style="color: #333;">简体</a></li>
+ 		<span>|</span>
+ 		<li><a href="javascript:void(0)">繁体</a></li>
+ 		<span>|</span>
+ 		<li><a href="javascript:void(0)">English</a></li>
+ 		<span>|</span>
+ 		<li><a href="https://static.account.xiaomi.com/html/faq/faqList.html" target="_blank">常见问题</a></li>
+ 		<span>|</span>
+ 		<li><a href="http://www.miui.com/res/doc/privacy/cn.html" target="_blank">隐私政策</a></li>
+   </ul>
+     <p>小米公司版权所有-京ICP备10046444-
+     <a href="http://www.beian.gov.cn/portal/registerSystemInfo?recordcode=11010802020134" target="_blank">
+     	<span> <img src="images/ghs.png"></span>京公网安备11010802020134号
+     </a>
+     -京ICP证110507号
+ </p>
+    
+ </div> 
+  
+  <script type="text/javascript">
+  	var a1=document.querySelector('.a1');
+  	var a2=document.querySelector('.a2');
+  	var zc=document.querySelector('.zc');
+  	var bt=document.querySelector('.bt');
+  	var phoneA=document.querySelector('.phone-a');
+  	var divcenter=document.querySelector('.login-center');
+  	var divbottom=document.querySelector('.login-bottom');
+  	var ewm=document.querySelector('.sm-main');
+  	var qh=document.querySelector('.qh');
+  	var tel=document.querySelector('.tel');
+  	var yzm=document.querySelector('.yzm');
+  	var username=document.querySelector('.username');
+  	var pwd=document.querySelector('.pwd');
+  	var number1=document.querySelector('.number1');
+  	phoneA.onclick=function(){
+  		if (phoneA.innerHTML==='手机短信登录/注册'){
+  		phoneA.innerHTML='用户名密码登录';
+  		zc.style.display='none';
+  		bt.value="立即登录/注册";
+  		username.style.display='none';
+  		pwd.style.display='none';
+  		tel.style.display='block';
+  		qh.style.display='block';
+  		yzm.style.display='block';
+  		number1.style.display='block';
+  	}
+  	else {
+  		phoneA.innerHTML='手机短信登录/注册';
+  		zc.style.display='block';
+  		bt.value="登录";
+  		username.style.display='block';
+  		pwd.style.display='block';
+  		tel.style.display='none';
+  		qh.style.display='none';
+  		yzm.style.display='none';
+  		number1.style.display='none';
+  	}
+  	}
+  	a2.onclick=function(){
+  		a2.classList.add("now");
+  		a1.classList.remove("now");
+  		divcenter.style.display='none';
+  		divbottom.style.display='none';
+  		ewm.style.display='block';
+  	}
+  	a1.onclick=function(){
+		a1.classList.add("now");
+  		a2.classList.remove("now");
+  		divcenter.style.display='block';
+  		divbottom.style.display='block';
+  		ewm.style.display='none';
+  	}
+  </script>
+</body>
+</html>
